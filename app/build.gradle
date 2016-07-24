@@ -1,0 +1,26 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 'Google Inc.:Google APIs:22'
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        applicationId "com.pigmal.android.fourbeat"
+        versionName "0.2.3"
+        versionCode 11
+        minSdkVersion 10
+        targetSdkVersion 22
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:support-v4:22.+'
+    compile files('libs/Parse-1.3.1.jar')
+}
